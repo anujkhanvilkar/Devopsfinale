@@ -1,0 +1,27 @@
+<html>
+<?phpecho"Hello world from php container ">
+</html>
+
+FROM php
+COPY ./ ./
+EXPOSE 3000
+CMD ["php","-S","0.0.0.0:3000"]
+
+<html>
+<head>
+</head>
+<body>
+<h1>Hello World<h1>
+</body>
+</html>
+
+
+docker build . -t dockerhubaccountname/foldername
+docker run --name=php -p=3000:3000 dockerhubaccountname/foldername
+ localhost:3000
+
+docker run -it -d ubuntu
+docker rmi ubuntu
+docker pull ubuntu
+docker tag ubuntu shayamsoni/ubuntu
+docker push shayamsoni/ubuntu
